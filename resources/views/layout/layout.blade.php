@@ -12,6 +12,7 @@
   </head>
   <body>
     @include('partials.navbar')
+    @include('partials.carousel')
     @yield('container')
 
    

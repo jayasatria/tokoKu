@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #233E8B;">
         <div class="container">
 
         <a class="navbar-brand" href="/">EmasKu</a>
