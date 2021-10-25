@@ -17,7 +17,6 @@
     ?>
     @include('partials.carousel') 
      <?php 
-      
     } ?>
 
    
