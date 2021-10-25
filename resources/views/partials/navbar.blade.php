@@ -1,11 +1,11 @@
-<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #233E8B;">
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #22577A;">
         <div class="container">
 
         <a class="navbar-brand" href="/">EmasKu</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-            <div class="collapse navbar-collapse justify-content-lg-center" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <div class="navbar-nav">
                     <a class="nav-link" href="#">Emas Mini</a>
                     <a class="nav-link" href="#">Emas Antam</a>
