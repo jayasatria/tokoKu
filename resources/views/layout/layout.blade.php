@@ -12,7 +12,15 @@
   </head>
   <body>
     @include('partials.navbar')
-    @include('partials.carousel')
+    <?php 
+    if ($page == 'Home') {
+    ?>
+    @include('partials.carousel') 
+     <?php 
+      
+    } ?>
+
+   
     @yield('container')
 
    
