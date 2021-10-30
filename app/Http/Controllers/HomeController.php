@@ -30,4 +30,28 @@ class HomeController extends Controller
         ];
         return view('home.show', $data);
     }
+    public function emas_mini()
+    {
+        $category = "Emas Mini";
+        $product = imageProduct::where('category', $category)->get();
+        $data = [
+            'page' => 'Single',
+            'title' => 'EmasKu',
+            'category' => $product,
+            'judul' => 'Emas Mini'
+        ];
+        return view('home.category', $data);
+    }
+    public function emas_antam()
+    {
+        $category = "Emas Antam";
+        $product = imageProduct::where('category', $category)->get();
+        $data = [
+            'page' => 'Single',
+            'title' => 'EmasKu',
+            'category' => $product,
+            'judul' => 'Emas Antam'
+        ];
+        return view('home.category', $data);
+    }
 }

@@ -7,8 +7,9 @@
         </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <div class="navbar-nav">
-                    <a class="nav-link" href="#">Emas Mini</a>
-                    <a class="nav-link" href="#">Emas Antam</a>
+                    <a class="nav-link" href="/emas_mini">Emas Mini</a>
+                    <a class="nav-link" href="/emas_antam">Emas Antam</a>
+                    <a class="nav-link" href="/harga">Update Harga</a>
                     <a class="nav-link" href="#">Blog</a>
                 </div>
             </div>

@@ -15,4 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomeController::class, 'index']);
-Route::get('/{image_product}', [HomeController::class, 'show']);
+Route::get('/show/{image_product}', [HomeController::class, 'show']);
+Route::get('/emas_mini', [HomeController::class, 'emas_mini']);
+Route::get('/emas_antam', [HomeController::class, 'emas_antam']);
+Route::get('/harga', [HomeController::class, 'harga']);
