@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ProductController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,4 +18,6 @@ Route::get('/', [HomeController::class, 'index']);
 Route::get('/show/{image_product}', [HomeController::class, 'show']);
 Route::get('/emas_mini', [HomeController::class, 'emas_mini']);
 Route::get('/emas_antam', [HomeController::class, 'emas_antam']);
-Route::get('/harga', [HomeController::class, 'harga']);
+Route::get('/harga', [ProductController::class, 'index']);
+Route::get('/create', [ProductController::class, 'create']);
+Route::post('/store', [ProductController::class, 'store']);
