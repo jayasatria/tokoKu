@@ -2,6 +2,7 @@
 @section('container')
 <div class="container d-flex justify-content-center">
     <div class="col-lg-6">
+        <a href="/harga" class="badge bg-success">Back</a>
         <div class="card my-4">
             <div class="card-body" >
                 <form class="form-group" action="/store" method="POST">
@@ -94,6 +95,13 @@
                             <label for="100_gr" class="form-label">100 gr</label>
                             <input placeholder="Rp" type="number" class="form-control" name="100_gr" value="{{ old('100_gr') }}">
                             <span style="color: red">@error('100_gr')
+                                {{ $message }}
+                            @enderror</span>
+                        </div>
+                        <div class="mb-3">
+                            <label for="buyback" class="form-label">Buyback</label>
+                            <input placeholder="Rp" type="number" class="form-control" name="buyback" value="{{ old('buyback') }}">
+                            <span style="color: red">@error('buyback')
                                 {{ $message }}
                             @enderror</span>
                         </div>

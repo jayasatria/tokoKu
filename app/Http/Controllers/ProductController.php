@@ -16,6 +16,7 @@ class ProductController extends Controller
     public function index()
     {
         $product = Product::last();
+
         $data = [
             'page' => 'Update Harga',
             'title' => 'EmasKu',
@@ -69,6 +70,7 @@ class ProductController extends Controller
         $i050 = round(((int)$i50 * 0.037 + 40000) + (int)$i50, -3);
         $i100 = $request->input('100_gr');
         $i0100 = round(((int)$i100 * 0.032 + 40000) + (int)$i100, -3);
+        $buyback = $request->input('buyback');
         $request->validate([
             'tanggal' => 'required',
             '0,025_gr' => 'required',
@@ -81,7 +83,8 @@ class ProductController extends Controller
             '10_gr' => 'required',
             '25_gr' => 'required',
             '50_gr' => 'required',
-            '100_gr' => 'required'
+            '100_gr' => 'required',
+            'buyback' => 'required'
         ]);
         $data = [
             'tanggal' => $tanggal,
@@ -95,21 +98,23 @@ class ProductController extends Controller
             '10_gr' => $i10,
             '25_gr' => $i25,
             '50_gr' => $i50,
-            '100_gr' => $i100
+            '100_gr' => $i100,
+            'buyback' => $buyback
         ];
         $data2 = [
             'tanggal' => $tanggal,
-            '0,025_gr' => $oo250,
-            '0,05_gr' => $oo50,
-            '0,1_gr' => $o10,
-            '0,2_gr' => $o20,
-            '0,5_gr' => $o50,
-            '1_gr' => $i01,
-            '5_gr' => $i05,
-            '10_gr' => $i010,
-            '25_gr' => $i025,
-            '50_gr' => $i050,
-            '100_gr' => $i0100
+            'o0025_gr' => $oo250,
+            'o005_gr' => $oo50,
+            'o01_gr' => $o10,
+            'o02_gr' => $o20,
+            'o05_gr' => $o50,
+            'o1_gr' => $i01,
+            'o5_gr' => $i05,
+            'o10_gr' => $i010,
+            'o25_gr' => $i025,
+            'o50_gr' => $i050,
+            'o100_gr' => $i0100,
+            'buyback' => $buyback
         ];
         DB::table('products')->insert($data2);
         $query = DB::table('harga_awal')->insert($data);
